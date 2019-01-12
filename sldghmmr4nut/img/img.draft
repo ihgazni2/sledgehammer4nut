@@ -1,0 +1,20 @@
+#txt2mat
+#bgr
+
+# img = cv2.imread("./kyo.0.png")
+
+# 因为opencv是浮点运算,字符矩阵数量不够多，误差会很大
+# print(s)
+
+# s = """月晕雾不开
+# 海鲸东蹙百川
+# 惊波一起三山
+# 公无渡"""
+
+# def rotate(s,deg):
+    # img = txt2ndarr(s)
+    # (h, w) = img.shape[:2]
+    # center = (w // 2, h // 2)
+    # m = cv2.getRotationMatrix2D(center, deg, 1) 
+    # img = cv2.warpAffine(img, m, (w, h))
+    # print(ndarr2txt(img))
