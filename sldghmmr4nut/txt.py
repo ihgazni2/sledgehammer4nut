@@ -7,9 +7,15 @@ import sldghmmr4nut.ndarr.convert as ndcvt
 
 def wrap(s,fn,*args,**kwargs):
     ndarr = ndcvt.txt2ndarr(s,**kwargs)
-    ndarr = fn(ndarr,*args)
+    cond = (args[0] == [])
+    if(cond):
+        ndarr = fn(ndarr)
+    else:
+        ndarr = fn(ndarr,*args)
     s = ndcvt.ndarr2txt(ndarr)
     return(s)
+
+
 
 def txtfilter(s,actions,**kwargs):
     actions = ndo.creat_action_list(actions,**kwargs)
@@ -34,7 +40,7 @@ def to_ancient_chinese(s,**kwargs):
     s = txtfilter(s,[ndo.swap_dimension,np.fliplr],**kwargs)
     return(s)
 
-def from_ancient_chinese(s,**kwargs_rows):
+def from_ancient_chinese(s,**kwargs):
     s = txtfilter(s,[np.fliplr,ndo.swap_dimension],**kwargs)
     return(s)
 
@@ -56,66 +62,66 @@ def swap_cols(s,colseqs1,colseqs2,**kwargs):
 
 def insert_row(s,rowseq,row,**kwargs):
     row = eses.str2chnums(row)
-    s = wrap(s,ndo.insert_row,[rowseq,row],**kwargs)
+    s = wrap(s,ndo.insert_row,rowseq,row,**kwargs)
     return(s)
 
 def insert_rows(s,rowseq,rows,**kwargs):
     rows = elel.mapv(rows,eses.str2chnums)
-    s = wrap(s,ndo.insert_rows,[rowseq,rows],**kwargs)
+    s = wrap(s,ndo.insert_rows,rowseq,rows,**kwargs)
     return(s)
 
 def insert_col(s,colseq,col,**kwargs):
     col = eses.str2chnums(col)
-    s = wrap(s,ndo.insert_col,[colseq,col],**kwargs)
+    s = wrap(s,ndo.insert_col,colseq,col,**kwargs)
     return(s)
 
 def insert_cols(s,colseq,cols,**kwargs):
     cols = elel.mapv(cols,eses.str2chnums)
-    s = wrap(s,ndo.insert_cols,[colseq,cols],**kwargs)
+    s = wrap(s,ndo.insert_cols,colseq,cols,**kwargs)
     return(s)
 
-def append_col(s,col):
+def append_col(s,col,**kwargs):
     col = eses.str2chnums(col)
-    s = wrap(s,ndo.append_col,[col],**kwargs)
+    s = wrap(s,ndo.append_col,col,**kwargs)
     return(s)
 
-def append_cols(s,cols):
+def append_cols(s,cols,**kwargs):
     cols = elel.mapv(cols,eses.str2chnums)
-    s = wrap(s,ndo.append_cols,[cols],**kwargs)
+    s = wrap(s,ndo.append_cols,cols,**kwargs)
     return(s)
 
-def append_row(s,row):
+def append_row(s,row,**kwargs):
     row = eses.str2chnums(row)
-    s = wrap(s,ndo.append_row,[row],**kwargs)
+    s = wrap(s,ndo.append_row,row,**kwargs)
     return(s)
 
-def append_rows(s,rows):
+def append_rows(s,rows,**kwargs):
     rows = elel.mapv(rows,eses.str2chnums)
-    s = wrap(s,ndo.append_rows,[row],**kwargs)
+    s = wrap(s,ndo.append_rows,rows,**kwargs)
     return(s)
 
-def prepend_col(s,col):
+def prepend_col(s,col,**kwargs):
     col = eses.str2chnums(col)
-    s = wrap(s,ndo.prepend_col,[col],**kwargs)
+    s = wrap(s,ndo.prepend_col,col,**kwargs)
     return(s)
 
-def prepend_cols(s,cols):
+def prepend_cols(s,cols,**kwargs):
     cols = elel.mapv(cols,eses.str2chnums)
-    s = wrap(s,ndo.prepend_cols,[cols],**kwargs)
+    s = wrap(s,ndo.prepend_cols,cols,**kwargs)
     return(s)
 
-def prepend_row(s,row):
+def prepend_row(s,row,**kwargs):
     row = eses.str2chnums(row)
-    s = wrap(s,ndo.prepend_row,[row],**kwargs)
+    s = wrap(s,ndo.prepend_row,row,**kwargs)
     return(s)
 
-def prepend_rows(s,rows):
+def prepend_rows(s,rows,**kwargs):
     rows = elel.mapv(rows,eses.str2chnums)
-    s = wrap(s,ndo.prepend_rows,[row],**kwargs)
+    s = wrap(s,ndo.prepend_rows,rows,**kwargs)
     return(s)
 
 def crop(s,top,left,bot,right,**kwargs):
-    s = wrap(s,ndo.crop,[top,left,bot,right],**kwargs)
+    s = wrap(s,ndo.crop,top,left,bot,right,**kwargs)
     return(s)
 
 def slct(s,rowseqs,colseqs,**kwargs):
@@ -201,15 +207,15 @@ def ccwrot270(s,**kwargs):
     return(s)
 
 def cwrot90(s,**kwargs):
-    s = wrap(s,ndo.ccwrot90,[],**kwargs)
+    s = wrap(s,ndo.cwrot90,[],**kwargs)
     return(s)
 
 def cwrot180(s,**kwargs):
-    s = wrap(s,ndo.ccwrot180,[],**kwargs)
+    s = wrap(s,ndo.cwrot180,[],**kwargs)
     return(s)
 
 def cwrot270(s,**kwargs):
-    s = wrap(s,ndo.ccwrot270,[],**kwargs)
+    s = wrap(s,ndo.cwrot270,[],**kwargs)
     return(s)
 
 def rowtop_colleft(s,**kwargs):
@@ -243,5 +249,11 @@ def rowright_colbot(s,**kwargs):
 def rowleft_colbot(s,**kwargs):
     s = wrap(s,ndo.rowleft_colbot,[],**kwargs)
     return(s)
+
+def quad_split(s,spt,**kwargs):
+    ndarr = ndcvt.txt2ndarr(s,**kwargs)
+    ndarrl = ndo.quad_split(ndarr,spt)
+    stl,str,sbl,sbr = elel.mapv(ndarrl,ndcvt.ndarr2txt)
+    return([stl,str,sbl,sbr])
 
 

@@ -1,6 +1,5 @@
 import numpy as np
 import copy
-import estring.estring as eses
 import elist.elist as elel
 from sldghmmr4nut.cmmn import utils
 from sldghmmr4nut.zone import locs
@@ -34,12 +33,10 @@ def insert_rows(ndarr,rowseq,rows,**kwargs):
     return(ndarr)
 
 def insert_col(ndarr,colseq,col,**kwargs):
-    col = eses.str2chnums(col)
     ndarr = np.insert(ndarr,colseq,col,1)
     return(ndarr)
 
 def insert_cols(ndarr,colseq,cols,**kwargs):
-    cols = elel.mapv(cols,eses.str2chnums)
     ndarr = np.insert(ndarr,colseq,cols,1)
     return(ndarr)
 
@@ -47,10 +44,10 @@ def append_col(ndarr,col):
     return(np.c_[ndarr,col])
 
 def append_cols(ndarr,cols):
-    return(np.c_[ndarr,cols])
+    return(np.c_[ndarr,np.array(cols).transpose()])
 
 def append_row(ndarr,row):
-    return(np.r_[ndarr,row])
+    return(np.r_[ndarr,[row]])
 
 def append_rows(ndarr,rows):
     return(np.r_[ndarr,rows])
@@ -59,7 +56,7 @@ def prepend_col(ndarr,col):
     return(np.c_[col,ndarr])
 
 def prepend_cols(ndarr,cols):
-    return(np.c_[cols,ndarr])
+    return(np.c_[np.array(cols).transpose(),ndarr])
 
 def prepend_row(ndarr,row):
     return(np.r_[row,ndarr])
@@ -68,11 +65,11 @@ def prepend_rows(ndarr,rows):
     return(np.r_[rows,ndarr])
 
 def crop(ndarr,top,left,bot,right):
-    ndarr = ndarr[top:bot,:][:,left:right]
+    ndarr = ndarr[top:bot+1,:][:,left:right+1]
     return(ndarr)
 
 def copr_tlbr(ndarr,tl,br):
-    ndarr = crop(ndarr,tl[0],tl[1],br[0]+1,br[1]+1)
+    ndarr = crop(ndarr,tl[0],tl[1],br[0],br[1])
     return(ndarr)
 
 
@@ -204,10 +201,10 @@ def rowleft_colbot(ndarr):
     return(ccwrot90(ndarr))
 
 
-def creat_action(fn,other_args):
+def creat_action(fn,*other_args):
     action = {
         "func":fn,
-        "other_args":other_args
+        "other_args":list(other_args)
     }
     return(action)
 
@@ -221,7 +218,7 @@ def creat_action_list(func_list,**kwargs):
 
 def filter(ndarr,actions):
     for i in range(actions.__len__()):
-        ndarr = actions[i]["func"](ndarr,*actions[i][other_args])
+        ndarr = actions[i]["func"](ndarr,*actions[i]["other_args"])
     return(ndarr)
 
 
