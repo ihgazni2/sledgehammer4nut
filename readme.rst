@@ -9,6 +9,26 @@ Introduce
 .. image:: /docs/images/zone/desc.0.png      
 
 
+Examples
+========
+- find a .txt file
+
+.. image:: /docs/images/txt/quad_smash_txt.0.png 
+
+
+- smash the .txt file into pieces as a point
+
+
+     ::
+ 
+    
+         from sldghmmr4nut  import txt
+         s,tl,tr,bl,br = txt.quad_smash_txt("poem.txt",(2,2),char_width=2)
+
+- find the pieces and cat them
+
+.. image:: /docs/images/txt/quad_smash_txt.1.png 
+
 
 .. contents:: Table of Contents
    :depth: 2
