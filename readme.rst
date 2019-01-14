@@ -265,7 +265,7 @@ Usage
           print(bl)
           print(br)
           
-.. image:: /docs/images/txt/quad_split.0.PNG           
+.. image:: /docs/images/txt/quad_split.0.png           
           
 - rm_col(s,colseq,**kwargs)
 
