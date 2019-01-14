@@ -2,19 +2,20 @@ import elist.elist as elel
 import estring.estring as eses
 import numpy as np
 import sldghmmr4nut.ndarr.do as ndo
+import sldghmmr4nut.ndarr.convert as ndcvt
 
 
 def wrap(s,fn,*args,**kwargs):
-    ndarr = ndo.convert.txt2ndarr(s,**kwargs)
+    ndarr = ndcvt.txt2ndarr(s,**kwargs)
     ndarr = fn(ndarr,*args)
-    s = ndo.convert.ndarr2txt(ndarr)
+    s = ndcvt.ndarr2txt(ndarr)
     return(s)
 
 def txtfilter(s,actions,**kwargs):
     actions = ndo.creat_action_list(actions,**kwargs)
-    ndarr = ndo.convert.txt2ndarr(s,**kwargs)
+    ndarr = ndcvt.txt2ndarr(s,**kwargs)
     ndarr = ndo.filter(ndarr,actions)
-    s = ndo.convert.ndarr2txt(ndarr)
+    s = ndcvt.ndarr2txt(ndarr)
     return(s)
 
 def swap_dimension(s,**kwargs):
@@ -242,4 +243,5 @@ def rowright_colbot(s,**kwargs):
 def rowleft_colbot(s,**kwargs):
     s = wrap(s,ndo.rowleft_colbot,[],**kwargs)
     return(s)
+
 

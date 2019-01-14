@@ -3,6 +3,8 @@ import copy
 import estring.estring as eses
 import elist.elist as elel
 from sldghmmr4nut.cmmn import utils
+from sldghmmr4nut.zone import locs
+
 
 def swap_dimension(ndarr):
     return(np.reshape(ndarr,ndarr.size,order='F').reshape(utils.swap_tuple_ele(ndarr.shape)))
@@ -68,6 +70,11 @@ def prepend_rows(ndarr,rows):
 def crop(ndarr,top,left,bot,right):
     ndarr = ndarr[top:bot,:][:,left:right]
     return(ndarr)
+
+def copr_tlbr(ndarr,tl,br):
+    ndarr = crop(ndarr,tl[0],tl[1],br[0]+1,br[1]+1)
+    return(ndarr)
+
 
 def slct(ndarr,rowseqs,colseqs):
     ndarr = ndarr[rowseqs,:][:,colseqs]
@@ -255,5 +262,20 @@ def get_corner_coord(ndarr,**kwargs):
     bot_left = (top+height-1,left)
     bot_right = (top+height-1,left+width-1)
     return([top_left,top_right,bot_left,bot_right])
+
+def get_tlbr(ndarr,**kwargs):
+    top_left,top_right,bot_left,bot_right = get_corner_coord(ndarr,**kwargs)
+    return([top_left,bot_right])
+
+
+def quad_split(ndarr,spt):
+    tl,br = get_tlbr(ndarr)
+    blk = locs.creat_root_block(tl,br,spt)
+    sblktl,sblktr,sblkbl,sblkbr = locs.quad_split(blk)
+    tlndarr = copr_tlbr(ndarr,sblktl['tl'],sblktl['br'])
+    trndarr = copr_tlbr(ndarr,sblktr['tl'],sblktr['br'])
+    blndarr = copr_tlbr(ndarr,sblkbl['tl'],sblkbl['br'])
+    brndarr = copr_tlbr(ndarr,sblkbr['tl'],sblkbr['br'])
+    return([tlndarr,trndarr,blndarr,brndarr])
 
 #####
