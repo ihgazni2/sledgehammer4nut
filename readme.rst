@@ -2,8 +2,17 @@ sldghmmr4nut
 ------------
 a wrap of numpy to handle txt
 
+Introduce
+=========
+split txt into zones as below, and then handled it using numpy
+
+.. image:: /docs/images/desc/desc.0.png      
+
+
+
 .. contents:: Table of Contents
    :depth: 2
+   
 
 Install
 =======
