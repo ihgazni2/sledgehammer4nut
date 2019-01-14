@@ -13,7 +13,7 @@ Examples
 ========
 - find a .txt file
 
-.. image:: /docs/images/txt/quda_smash_txt.0.png 
+.. image:: /docs/images/txt/quad_smash_txt.0.png 
 
 
 - smash the .txt file into pieces as a point
@@ -326,7 +326,7 @@ quad_split(s,spt,**kwargs)
           print(bl)
           print(br)
           
-.. image:: /docs/images/txt/quad_split.0.png           
+.. image:: /docs/images/txt/quda_split.0.png           
           
 rm_col(s,colseq,**kwargs)
 ##########################
