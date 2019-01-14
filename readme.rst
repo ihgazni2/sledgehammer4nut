@@ -30,11 +30,12 @@ Usage
           print(ss)
 
 .. image:: /docs/images/txt/append_col.0.png      
-      
-- append_cols(s,cols,,**kwargs)
 
+
+- append_cols(s,cols,**kwargs)
+  
       ::
-     
+      
           ss = txt.append_cols(s,["RRRR","ABCD","RRRR"])
           print(ss)
 
