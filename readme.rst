@@ -11,8 +11,7 @@ Usage
 =====
 
 - prepare
-
-      ::   
+  
           from sldghmmr4nut  import txt
           
           s = '''两人对酌山花开
@@ -29,7 +28,8 @@ Usage
      
           ss = txt.append_col(s,"RRRR")
           print(ss)
-      
+
+.. image:: /docs/images/txt/append_col.0.png      
       
 - append_cols(s,cols,,**kwargs)
 
@@ -38,7 +38,9 @@ Usage
           ss = txt.append_cols(s,["RRRR","ABCD","RRRR"])
           print(ss)
 
-          
+.. image:: /docs/images/txt/append_cols.0.png
+
+
 - append_row(s,row,,**kwargs)
 
       ::
@@ -46,6 +48,7 @@ Usage
           ss = txt.append_row(s,"下下下下下下下")
           print(ss)
 
+.. image:: /docs/images/txt/append_row.0.png
 
 - append_rows(s,rows,**kwargs)
 
@@ -54,7 +57,7 @@ Usage
           ss = txt.append_rows(s,["下下下下下下下","一二三四五六七","下下下下下下下"])
           print(ss)
       
-      
+ .. image:: /docs/images/txt/append_rows.0.png     
       
 - ccwrot180(s,**kwargs)
 
