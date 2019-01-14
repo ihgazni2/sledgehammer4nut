@@ -7,6 +7,57 @@ Install
 
     In Progressing... 
 
+
+Table of Contents
+=================
+
+   * [swap_cols(s,colseqs1,colseqs2,**kwargs)](#swap_colsscolseqs1colseqs2kwargs)
+   * [insert_row(s,rowseq,row,**kwargs)](#insert_rowsrowseqrowkwargs)
+   * [insert_rows(s,rowseq,rows,**kwargs)](#insert_rowssrowseqrowskwargs)
+   * [insert_col(s,colseq,col,**kwargs)](#insert_colscolseqcolkwargs)
+   * [insert_cols(s,colseq,cols,**kwargs)](#insert_colsscolseqcolskwargs)
+   * [append_col(s,col,**kwargs)](#append_colscolkwargs)
+   * [append_cols(s,cols,**kwargs)](#append_colsscolskwargs)
+   * [append_row(s,row,**kwargs)](#append_rowsrowkwargs)
+   * [append_rows(s,rows,**kwargs)](#append_rowssrowskwargs)
+   * [prepend_col(s,col,**kwargs)](#prepend_colscolkwargs)
+   * [prepend_cols(s,cols,**kwargs)](#prepend_colsscolskwargs)
+   * [prepend_row(s,row,**kwargs)](#prepend_rowsrowkwargs)
+   * [prepend_rows(s,rows,**kwargs)](#prepend_rowssrowskwargs)
+   * [crop(s,top,left,bot,right,**kwargs)](#cropstopleftbotrightkwargs)
+   * [slct(s,rowseqs,colseqs,**kwargs)](#slctsrowseqscolseqskwargs)
+   * [slct_col(s,colseq,**kwargs)](#slct_colscolseqkwargs)
+   * [slct_cols(s,colseqs,**kwargs)](#slct_colsscolseqskwargs)
+   * [slct_row(s,rowseq,**kwargs)](#slct_rowsrowseqkwargs)
+   * [slct_rows(s,rowseqs,**kwargs)](#slct_rowssrowseqskwargs)
+   * [rows(s,**kwargs)](#rowsskwargs)
+   * [cols(s,**kwargs)](#colsskwargs)
+   * [rplc_col(s,colseq,col,**kwargs)](#rplc_colscolseqcolkwargs)
+   * [rplc_cols(s,colseqs,cols,**kwargs)](#rplc_colsscolseqscolskwargs)
+   * [rplc_row(s,rowseq,row,**kwargs)](#rplc_rowsrowseqrowkwargs)
+   * [rplc_rows(s,rowseqs,rows,**kwargs)](#rplc_rowssrowseqsrowskwargs)
+   * [rplc_blk(s,top,left,bot,right,blk,**kwargs)](#rplc_blkstopleftbotrightblkkwargs)
+   * [rm_col(s,colseq,**kwargs)](#rm_colscolseqkwargs)
+   * [rm_cols(s,colseqs,**kwargs)](#rm_colsscolseqskwargs)
+   * [rm_row(s,rowseq,**kwargs)](#rm_rowsrowseqkwargs)
+   * [rm_rows(s,rowseqs,**kwargs)](#rm_rowssrowseqskwargs)
+   * [ccwrot90(s,**kwargs)](#ccwrot90skwargs)
+   * [ccwrot180(s,**kwargs)](#ccwrot180skwargs)
+   * [ccwrot270(s,**kwargs)](#ccwrot270skwargs)
+   * [cwrot90(s,**kwargs)](#cwrot90skwargs)
+   * [cwrot180(s,**kwargs)](#cwrot180skwargs)
+   * [cwrot270(s,**kwargs)](#cwrot270skwargs)
+   * [rowtop_colleft(s,**kwargs)](#rowtop_colleftskwargs)
+   * [rowtop_colright(s,**kwargs)](#rowtop_colrightskwargs)
+   * [rowbot_colright(s,**kwargs)](#rowbot_colrightskwargs)
+   * [rowbot_colleft(s,**kwargs)](#rowbot_colleftskwargs)
+   * [rowleft_coltop(s,**kwargs)](#rowleft_coltopskwargs)
+   * [rowright_coltop(s,**kwargs)](#rowright_coltopskwargs)
+   * [rowright_colbot(s,**kwargs)](#rowright_colbotskwargs)
+   * [rowleft_colbot(s,**kwargs)](#rowleft_colbotskwargs)
+   * [quad_split(s,spt,**kwargs)](#quad_splitssptkwargs)
+
+
 Usage
 =====
 
