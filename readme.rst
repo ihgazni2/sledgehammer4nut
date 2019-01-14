@@ -211,7 +211,7 @@ Usage
           ss = txt.insert_rows(s,2,["二二二二二二二","三三三三三三三","四四四四四四四"])
           print(ss)
 
-.. image:: /docs/images/txt/insert_rows.0.png 
+.. image:: /docs/images/txt/insert_rows.0.PNG
 
 - prepend_col(s,col,**kwargs)
 
@@ -265,7 +265,7 @@ Usage
           print(bl)
           print(br)
           
-.. image:: /docs/images/txt/quad_split.0.png           
+.. image:: /docs/images/txt/quad_split.0.PNG           
           
 - rm_col(s,colseq,**kwargs)
 
