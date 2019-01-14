@@ -13,7 +13,7 @@ Examples
 ========
 - find a .txt file
 
-.. image:: /docs/images/txt/quad_smash_txt.0.png 
+.. image:: /docs/images/txt/quda_smash_txt.0.png 
 
 
 - smash the .txt file into pieces as a point
@@ -27,7 +27,7 @@ Examples
 
 - find the pieces and cat them
 
-.. image:: /docs/images/txt/quad_smash_txt.1.png 
+.. image:: /docs/images/txt/quda_smash_txt.1.png
 
 
 .. contents:: Table of Contents
