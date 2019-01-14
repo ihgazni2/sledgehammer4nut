@@ -306,7 +306,7 @@ Usage
           ss = txt.rm_rows(s,[1,3,5])
           print(ss)
 
-.. image:: /docs/images/txt/rm_rows.0.png 
+.. image:: /docs/images/txt/rm_rows.0.PNG 
 
 - rowbot_colleft(s,**kwargs)
 
