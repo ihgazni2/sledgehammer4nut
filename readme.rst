@@ -108,7 +108,6 @@ Usage
 
 - cwrot180(s,**kwargs)
 
-      ::
           ss = txt.cwrot180(s)
           print(ss)
 
@@ -155,6 +154,8 @@ Usage
 .. image:: /docs/images/txt/flipud.0.png 
 
 - from_ancient_chinese(s,**kwargs_rows)
+
+      ::
 
           #ancient chinese from up to down, from right to left 
           ancient = '''明我一两
