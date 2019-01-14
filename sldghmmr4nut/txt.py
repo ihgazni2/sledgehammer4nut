@@ -45,19 +45,19 @@ def from_ancient_chinese(s,**kwargs):
     return(s)
 
 def swap_row(s,rowseq1,rowseq2,**kwargs):
-    s = wrap(s,ndo.swap_row,[rowseq1,rowseq2],**kwargs)
+    s = wrap(s,ndo.swap_row,rowseq1,rowseq2,**kwargs)
     return(s)
 
 def swap_rows(s,rowseqs1,rowseqs2,**kwargs):
-    s = wrap(s,ndo.swap_rows,[rowseqs1,rowseqs2],**kwargs)
+    s = wrap(s,ndo.swap_rows,rowseqs1,rowseqs2,**kwargs)
     return(s)
 
 def swap_col(s,colseq1,colseq2,**kwargs):
-    s = wrap(s,ndo.swap_col,[colseq1,colseq2],**kwargs)
+    s = wrap(s,ndo.swap_col,colseq1,colseq2,**kwargs)
     return(s)
 
 def swap_cols(s,colseqs1,colseqs2,**kwargs):
-    s = wrap(s,ndo.swap_cols,[colseqs1,colseqs2],**kwargs)
+    s = wrap(s,ndo.swap_cols,colseqs1,colseqs2,**kwargs)
     return(s)
 
 def insert_row(s,rowseq,row,**kwargs):
@@ -125,7 +125,7 @@ def crop(s,top,left,bot,right,**kwargs):
     return(s)
 
 def slct(s,rowseqs,colseqs,**kwargs):
-    s = wrap(s,ndo.slct,[rowseqs,colseqs],**kwargs)
+    s = wrap(s,ndo.slct,rowseqs,colseqs,**kwargs)
     return(s)
 
 def slct_col(s,colseq,**kwargs):
@@ -133,7 +133,7 @@ def slct_col(s,colseq,**kwargs):
     return(s)
 
 def slct_cols(s,colseqs,**kwargs):
-    s = wrap(s,ndo.slct_cols,[colseqs],**kwargs)
+    s = wrap(s,ndo.slct_cols,colseqs,**kwargs)
     return(s)
 
 def slct_row(s,rowseq,**kwargs):
@@ -141,10 +141,10 @@ def slct_row(s,rowseq,**kwargs):
     return(s)
 
 def slct_rows(s,rowseqs,**kwargs):
-    s = wrap(s,ndo.slct_rows,[rowseqs],**kwargs)
+    s = wrap(s,ndo.slct_rows,rowseqs,**kwargs)
     return(s)
 
-def rows(s,**wargs):
+def rows(s,**kwargs):
     s = wrap(s,ndo.rows,[],**kwargs)
     return(s)
 
@@ -154,28 +154,29 @@ def cols(s,**kwargs):
 
 def rplc_col(s,colseq,col,**kwargs):
     col = eses.str2chnums(col)
-    s = wrap(s,ndo.rplc_col,[colseq,col],**kwargs)
+    s = wrap(s,ndo.rplc_col,colseq,col,**kwargs)
     return(s)
 
 def rplc_cols(s,colseqs,cols,**kwargs):
     cols = elel.mapv(cols,eses.str2chnums)
     cols = np.array(cols)
-    s = wrap(s,ndo.rplc_cols,[colseqs,cols],**kwargs)
+    s = wrap(s,ndo.rplc_cols,colseqs,cols,**kwargs)
     return(s)
 
 def rplc_row(s,rowseq,row,**kwargs):
     row = eses.str2chnums(row)
-    s = wrap(s,ndo.rplc_row,[rowseq,row],**kwargs)
+    s = wrap(s,ndo.rplc_row,rowseq,row,**kwargs)
     return(s)
 
 def rplc_rows(s,rowseqs,rows,**kwargs):
     rows = elel.mapv(rows,eses.str2chnums)
     rows = np.array(rows)
-    s = wrap(s,ndo.rplc_rows,[rowseqs,rows],**kwargs)
+    s = wrap(s,ndo.rplc_rows,rowseqs,rows,**kwargs)
     return(s)
 
 def rplc_blk(s,top,left,bot,right,blk,**kwargs):
-    s = wrap(s,ndo.rplc_blk,[top,left,bot,right,blk],**kwargs)
+    blk = ndcvt.txt2ndarr(blk,**kwargs) 
+    s = wrap(s,ndo.rplc_blk,top,left,bot,right,blk,**kwargs)
     return(s)
 
 def rm_col(s,colseq,**kwargs):

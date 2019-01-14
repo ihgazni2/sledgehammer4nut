@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 setup(
       name="sldghmmr4nut",
       version = "0.4",
-      description="handle,.in progressing..,APIs",
+      description="txt-spliter wrap of numpy to handle txt",
       author="dapeli",
       url="https://github.com/ihgazni2/sldghmmr4nut",
       author_email='terryinzaghi@163.com', 

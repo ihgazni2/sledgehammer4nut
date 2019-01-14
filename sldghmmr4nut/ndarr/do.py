@@ -13,7 +13,9 @@ def swap_row(ndarr,rowseq1,rowseq2):
     return(ndarr)
 
 def swap_rows(ndarr,rowseqs1,rowseqs2):
+    tmp = ndarr[rowseqs1,:]
     ndarr[rowseqs1,:] = ndarr[rowseqs2,:]
+    ndarr[rowseqs2,:] = tmp
     return(ndarr)
 
 def swap_col(ndarr,colseq1,colseq2):
@@ -21,7 +23,9 @@ def swap_col(ndarr,colseq1,colseq2):
     return(ndarr)
 
 def swap_cols(ndarr,colseqs1,colseqs2):
+    tmp = copy.deepcopy(ndarr[:,colseqs1])
     ndarr[:,colseqs1] = ndarr[:,colseqs2]
+    ndarr[:,colseqs2] = tmp 
     return(ndarr)
 
 def insert_row(ndarr,rowseq,row):
@@ -59,7 +63,7 @@ def prepend_cols(ndarr,cols):
     return(np.c_[np.array(cols).transpose(),ndarr])
 
 def prepend_row(ndarr,row):
-    return(np.r_[row,ndarr])
+    return(np.r_[[row],ndarr])
 
 def prepend_rows(ndarr,rows):
     return(np.r_[rows,ndarr])
@@ -122,7 +126,8 @@ def rplc_blk(ndarr,top,left,bot,right,blk):
     rowseqs = elel.init_range(top,bot+1,1)
     rows_ndarr = copy.deepcopy(ndarr[rowseqs,:])
     colseqs = elel.init_range(left,right+1,1)
-    cols = blk.transpose()
+    #cols = blk.transpose()
+    cols = blk
     rows_ndarr[:,colseqs] = cols
     ndarr[rowseqs,:] = rows_ndarr
     return(ndarr)
