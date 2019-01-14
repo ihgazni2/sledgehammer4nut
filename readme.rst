@@ -650,6 +650,7 @@ wrap(s,fn,*args,**kwargs)
 Dependancy
 ==========
 
-- numpy
-- elist
-- estring
+- `numpy <https://www.numpy.org/>`_
+- `elist <https://github.com/ihgazni2/elist>`_
+- `estring <https://github.com/ihgazni2/estring>`_
+- `spaint <https://github.com/ihgazni2/string-painter>`_
