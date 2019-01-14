@@ -427,7 +427,7 @@ Usage
           ss = txt.rplc_cols(s,[0,3],["零零零零","叁叁叁叁"])
           print(ss)
 
-.. image:: /docs/images/txt/rplc_cols.0.png
+.. image:: /docs/images/txt/rplc_cols.0.PNG
 
 
 - rplc_row(s,rowseq,row,**kwargs)
