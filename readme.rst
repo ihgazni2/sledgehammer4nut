@@ -156,7 +156,6 @@ Usage
 
 - from_ancient_chinese(s,**kwargs_rows)
 
-      ::
           #ancient chinese from up to down, from right to left 
           ancient = '''明我一两
           朝醉杯人
