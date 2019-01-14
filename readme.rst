@@ -17,7 +17,7 @@ Introduce
 Install
 =======
 
-    In Progressing... 
+    pip3 install  sldghmmr4nut
 
 
 Usage
