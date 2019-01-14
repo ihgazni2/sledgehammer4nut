@@ -2,67 +2,21 @@ sldghmmr4nut
 ------------
 a wrap of numpy to handle txt
 
+.. contents:: Table of Contents
+   :depth: 2
+
 Install
 =======
 
     In Progressing... 
 
 
-Table of Contents
-=================
-
-   * [swap_cols(s,colseqs1,colseqs2,**kwargs)](#swap_cols)
-   * [insert_row(s,rowseq,row,**kwargs)](#insert_row)
-   * [insert_rows(s,rowseq,rows,**kwargs)](#insert_rows)
-   * [insert_col(s,colseq,col,**kwargs)](#insert_col)
-   * [insert_cols(s,colseq,cols,**kwargs)](#insert_col)
-   * [append_col(s,col,**kwargs)](#append_col)
-   * [append_cols(s,cols,**kwargs)](#append_cols)
-   * [append_row(s,row,**kwargs)](#append_row)
-   * [append_rows(s,rows,**kwargs)](#append_rows)
-   * [prepend_col(s,col,**kwargs)](#prepend_col)
-   * [prepend_cols(s,cols,**kwargs)](#prepend_cols)
-   * [prepend_row(s,row,**kwargs)](#prepend_row)
-   * [prepend_rows(s,rows,**kwargs)](#prepend_rows)
-   * [crop(s,top,left,bot,right,**kwargs)](#crop)
-   * [slct(s,rowseqs,colseqs,**kwargs)](#slct)
-   * [slct_col(s,colseq,**kwargs)](#slct_col)
-   * [slct_cols(s,colseqs,**kwargs)](#slct_cols)
-   * [slct_row(s,rowseq,**kwargs)](#slct_row)
-   * [slct_rows(s,rowseqs,**kwargs)](#slct_rows)
-   * [rows(s,**kwargs)](#rowss)
-   * [cols(s,**kwargs)](#colss)
-   * [rplc_col(s,colseq,col,**kwargs)](#rplc_col)
-   * [rplc_cols(s,colseqs,cols,**kwargs)](#rplc_cols)
-   * [rplc_row(s,rowseq,row,**kwargs)](#rplc_row)
-   * [rplc_rows(s,rowseqs,rows,**kwargs)](#rplc_rows)
-   * [rplc_blk(s,top,left,bot,right,blk,**kwargs)](#rplc_blk)
-   * [rm_col(s,colseq,**kwargs)](#rm_col)
-   * [rm_cols(s,colseqs,**kwargs)](#rm_cols)
-   * [rm_row(s,rowseq,**kwargs)](#rm_row)
-   * [rm_rows(s,rowseqs,**kwargs)](#rm_rows)
-   * [ccwrot90(s,**kwargs)](#ccwrot90)
-   * [ccwrot180(s,**kwargs)](#ccwrot180)
-   * [ccwrot270(s,**kwargs)](#ccwrot270)
-   * [cwrot90(s,**kwargs)](#cwrot90s)
-   * [cwrot180(s,**kwargs)](#cwrot180)
-   * [cwrot270(s,**kwargs)](#cwrot270)
-   * [rowtop_colleft(s,**kwargs)](#rowtop_colleft)
-   * [rowtop_colright(s,**kwargs)](#rowtop_colright)
-   * [rowbot_colright(s,**kwargs)](#rowbot_colright)
-   * [rowbot_colleft(s,**kwargs)](#rowbot_colleft)
-   * [rowleft_coltop(s,**kwargs)](#rowleft_coltop)
-   * [rowright_coltop(s,**kwargs)](#rowright_coltop)
-   * [rowright_colbot(s,**kwargs)](#rowright_colbot)
-   * [rowleft_colbot(s,**kwargs)](#rowleft_colbot)
-   * [quad_split(s,spt,**kwargs)](#quad_split)
-
-
 Usage
 =====
 
-- prepare
-  
+
+prepare
+#######  
           from sldghmmr4nut  import txt
           
           s = '''两人对酌山花开
@@ -73,7 +27,8 @@ Usage
           print(s)
 
 
-- append_col(s,col,**kwargs)
+append_col(s,col,**kwargs)
+##########################
 
       ::
      
@@ -83,8 +38,8 @@ Usage
 .. image:: /docs/images/txt/append_col.0.png      
 
 
-- append_cols(s,cols,**kwargs)
-  
+append_cols(s,cols,**kwargs)
+############################  
       ::
       
           ss = txt.append_cols(s,["RRRR","ABCD","RRRR"])
@@ -93,8 +48,8 @@ Usage
 .. image:: /docs/images/txt/append_cols.0.PNG
 
 
-- append_row(s,row,,**kwargs)
-
+append_row(s,row,,**kwargs)
+##########################
       ::
 
           ss = txt.append_row(s,"下下下下下下下")
@@ -102,7 +57,8 @@ Usage
 
 .. image:: /docs/images/txt/append_row.0.png
 
-- append_rows(s,rows,**kwargs)
+append_rows(s,rows,**kwargs)
+###########################
 
       ::
         
@@ -113,7 +69,8 @@ Usage
 .. image:: /docs/images/txt/append_rows.0.png     
  
  
-- ccwrot180(s,**kwargs)
+ccwrot180(s,**kwargs)
+##########################
 
       ::
       
@@ -122,7 +79,8 @@ Usage
 
 .. image:: /docs/images/txt/ccwrot180.0.png 
 
-- ccwrot270(s,**kwargs)
+ccwrot270(s,**kwargs)
+##########################
 
       ::
       
@@ -130,7 +88,8 @@ Usage
           print(ss)
 .. image:: /docs/images/txt/ccwrot270.0.png           
           
-- ccwrot90(s,**kwargs)
+ccwrot90(s,**kwargs)
+##########################
 
       ::
       
@@ -139,7 +98,8 @@ Usage
 
 .. image:: /docs/images/txt/ccwrot90.0.png 
 
-- cols(s,**kwargs)
+cols(s,**kwargs)
+################
 
       ::
       
@@ -148,7 +108,8 @@ Usage
 
 .. image:: /docs/images/txt/cols.0.png 
 
-- crop(s,top,left,bot,right,**kwargs)
+crop(s,top,left,bot,right,**kwargs)
+##########################
 
       ::
       
@@ -157,14 +118,16 @@ Usage
 
 .. image:: /docs/images/txt/crop.0.png 
 
-- cwrot180(s,**kwargs)
+cwrot180(s,**kwargs)
+##########################
 
           ss = txt.cwrot180(s)
           print(ss)
 
 .. image:: /docs/images/txt/cwrot180.0.png 
 
-- cwrot270(s,**kwargs)
+cwrot270(s,**kwargs)
+##########################
 
       ::
       
@@ -174,7 +137,8 @@ Usage
 
 .. image:: /docs/images/txt/cwrot270.0.png 
 
-- cwrot90(s,**kwargs)
+cwrot90(s,**kwargs)
+##########################
 
       ::
 
@@ -184,7 +148,8 @@ Usage
 
 .. image:: /docs/images/txt/cwrot90.0.png 
 
-- fliplr(s,**kwargs)
+fliplr(s,**kwargs)
+##########################
 
       ::
       
@@ -194,7 +159,8 @@ Usage
 
 .. image:: /docs/images/txt/fliplr.0.png 
 
-- flipud(s,**kwargs)
+flipud(s,**kwargs)
+##########################
 
       ::
       
@@ -204,7 +170,8 @@ Usage
 
 .. image:: /docs/images/txt/flipud.0.png 
 
-- from_ancient_chinese(s,**kwargs_rows)
+from_ancient_chinese(s,**kwargs_rows)
+##########################
 
       ::
 
@@ -223,7 +190,8 @@ Usage
 
 .. image:: /docs/images/txt/from_ancient_chinese.0.png 
 
-- insert_col(s,colseq,col,**kwargs)
+insert_col(s,colseq,col,**kwargs)
+##########################
 
       ::
       
@@ -233,7 +201,8 @@ Usage
 
 .. image:: /docs/images/txt/insert_col.0.png 
 
-- insert_cols(s,colseq,cols,**kwargs)
+insert_cols(s,colseq,cols,**kwargs)
+##########################
 
       ::
       
@@ -244,7 +213,8 @@ Usage
 .. image:: /docs/images/txt/insert_cols.0.png 
 
 
-- insert_row(s,rowseq,row,**kwargs)
+insert_row(s,rowseq,row,**kwargs)
+##########################
 
       ::
       
@@ -254,7 +224,8 @@ Usage
 
 .. image:: /docs/images/txt/insert_row.0.png 
 
-- insert_rows(s,rowseq,rows,**kwargs)
+insert_rows(s,rowseq,rows,**kwargs)
+##########################
 
       ::
       
@@ -264,7 +235,8 @@ Usage
 
 .. image:: /docs/images/txt/inser_rows.0.png
 
-- prepend_col(s,col,**kwargs)
+prepend_col(s,col,**kwargs)
+##########################
 
       ::
       
@@ -274,7 +246,8 @@ Usage
 
 .. image:: /docs/images/txt/prepend_col.0.png 
 
-- prepend_cols(s,cols,**kwargs)
+prepend_cols(s,cols,**kwargs)
+##########################
 
       ::
       
@@ -284,7 +257,8 @@ Usage
 
 .. image:: /docs/images/txt/prepend_cols.0.png 
 
-- prepend_row(s,row,**kwargs)
+prepend_row(s,row,**kwargs)
+##########################
 
       ::
 
@@ -294,7 +268,8 @@ Usage
 
 .. image:: /docs/images/txt/prepend_row.0.png 
 
-- prepend_rows(s,rows,**kwargs)
+prepend_rows(s,rows,**kwargs)
+##########################
 
       ::
 
@@ -305,7 +280,8 @@ Usage
 
 .. image:: /docs/images/txt/prepend_rows.0.png 
 
-- quad_split(s,spt,**kwargs)
+quad_split(s,spt,**kwargs)
+##########################
 
       ::
 
@@ -318,7 +294,8 @@ Usage
           
 .. image:: /docs/images/txt/quad_split.0.png           
           
-- rm_col(s,colseq,**kwargs)
+rm_col(s,colseq,**kwargs)
+##########################
 
       ::
 
@@ -329,7 +306,8 @@ Usage
 .. image:: /docs/images/txt/rm_col.0.png 
 
 
-- rm_cols(s,colseqs,**kwargs)
+rm_cols(s,colseqs,**kwargs)
+##########################
 
       ::
       
@@ -339,7 +317,8 @@ Usage
 
 .. image:: /docs/images/txt/rm_cols.0.png 
 
-- rm_row(s,rowseq,**kwargs)
+rm_row(s,rowseq,**kwargs)
+##########################
 
       ::
       
@@ -349,7 +328,8 @@ Usage
 
 .. image:: /docs/images/txt/rm_row.0.png 
 
-- rm_rows(s,rowseqs,**kwargs)
+rm_rows(s,rowseqs,**kwargs)
+##########################
 
       ::
       
@@ -359,7 +339,8 @@ Usage
 
 .. image:: /docs/images/txt/rm_rows.0.PNG 
 
-- rowbot_colleft(s,**kwargs)
+rowbot_colleft(s,**kwargs)
+##########################
 
       ::
       
@@ -369,7 +350,8 @@ Usage
 
 .. image:: /docs/images/txt/rowbot_colleft.0.png 
 
-- rowbot_colright(s,**kwargs)
+rowbot_colright(s,**kwargs)
+##########################
 
       ::
       
@@ -379,7 +361,8 @@ Usage
 
 .. image:: /docs/images/txt/rowbot_colright.0.png 
 
-- rowleft_colbot(s,**kwargs)
+rowleft_colbot(s,**kwargs)
+##########################
 
       ::
       
@@ -389,7 +372,8 @@ Usage
 
 .. image:: /docs/images/txt/rowleft_colbot.0.png
 
-- rowleft_coltop(s,**kwargs)
+rowleft_coltop(s,**kwargs)
+##########################
 
       ::
       
@@ -399,7 +383,8 @@ Usage
 
 .. image:: /docs/images/txt/rowleft_coltop.0.png          
           
-- rowright_colbot(s,**kwargs)
+rowright_colbot(s,**kwargs)
+##########################
 
       ::
       
@@ -409,7 +394,8 @@ Usage
 
 .. image:: /docs/images/txt/rowright_colbot.0.png 
 
-- rowright_coltop(s,**kwargs)
+rowright_coltop(s,**kwargs)
+##########################
 
       ::
       
@@ -419,7 +405,8 @@ Usage
 
 .. image:: /docs/images/txt/rowright_coltop.0.png 
 
-- rows(s,**wargs)
+rows(s,**wargs)
+##########################
 
       ::
       
@@ -429,7 +416,8 @@ Usage
 
 .. image:: /docs/images/txt/rows.0.png
 
-- rowtop_colleft(s,**kwargs)
+rowtop_colleft(s,**kwargs)
+##########################
 
       ::
       
@@ -439,7 +427,8 @@ Usage
 
 .. image:: /docs/images/txt/rowtop_colleft.0.png
 
-- rowtop_colright(s,**kwargs)
+rowtop_colright(s,**kwargs)
+##########################
 
       ::
       
@@ -449,7 +438,8 @@ Usage
 
 .. image:: /docs/images/txt/rowtop_colright.0.png
 
-- rplc_blk(s,top,left,bot,right,blk,**kwargs)
+rplc_blk(s,top,left,bot,right,blk,**kwargs)
+##########################
 
       ::
           blk ="""你你你
@@ -460,7 +450,8 @@ Usage
 
 .. image:: /docs/images/txt/rplc_blk.0.png
 
-- rplc_col(s,colseq,col,**kwargs)
+rplc_col(s,colseq,col,**kwargs)
+##########################
 
       ::
       
@@ -470,7 +461,8 @@ Usage
 
 .. image:: /docs/images/txt/rplc_col.0.png
 
-- rplc_cols(s,colseqs,cols,**kwargs)
+rplc_cols(s,colseqs,cols,**kwargs)
+##########################
 
       ::
       
@@ -481,7 +473,8 @@ Usage
 .. image:: /docs/images/txt/rplc_cols.0.PNG
 
 
-- rplc_row(s,rowseq,row,**kwargs)
+rplc_row(s,rowseq,row,**kwargs)
+##########################
 
       ::
       
@@ -491,7 +484,8 @@ Usage
 
 .. image:: /docs/images/txt/rplc_row.0.png
 
-- rplc_rows(s,rowseqs,rows,**kwargs)
+rplc_rows(s,rowseqs,rows,**kwargs)
+##########################
 
       ::
       
@@ -501,7 +495,8 @@ Usage
 
 .. image:: /docs/images/txt/rplc_rows.0.png
 
-- slct_col(s,colseq,**kwargs)
+slct_col(s,colseq,**kwargs)
+##########################
 
       ::
       
@@ -511,7 +506,8 @@ Usage
 
 .. image:: /docs/images/txt/slct_col.0.png
 
-- slct_cols(s,colseqs,**kwargs)
+slct_cols(s,colseqs,**kwargs)
+##########################
 
       ::
       
@@ -521,7 +517,8 @@ Usage
 
 .. image:: /docs/images/txt/slct_cols.0.png
 
-- slct_row(s,rowseq,**kwargs)
+slct_row(s,rowseq,**kwargs)
+##########################
 
       ::
       
@@ -531,7 +528,8 @@ Usage
 
 .. image:: /docs/images/txt/slct_row.0.png
 
-- slct_rows(s,rowseqs,**kwargs)
+slct_rows(s,rowseqs,**kwargs)
+##########################
 
       ::
       
@@ -541,7 +539,8 @@ Usage
 
 .. image:: /docs/images/txt/slct_rows.0.png
 
-- slct(s,rowseqs,colseqs,**kwargs)
+slct(s,rowseqs,colseqs,**kwargs)
+##########################
 
       ::
       
@@ -551,7 +550,8 @@ Usage
 
 .. image:: /docs/images/txt/slct.0.png
 
-- swap_col(s,colseq1,colseq2,**kwargs)
+swap_col(s,colseq1,colseq2,**kwargs)
+##########################
 
       ::
       
@@ -561,7 +561,8 @@ Usage
 
 .. image:: /docs/images/txt/swap_col.0.png
 
-- swap_cols(s,colseqs1,colseqs2,**kwargs)
+swap_cols(s,colseqs1,colseqs2,**kwargs)
+##########################
 
       ::
       
@@ -571,7 +572,8 @@ Usage
 
 .. image:: /docs/images/txt/swap_cols.0.png
 
-- swap_dimension(s,**kwargs)
+swap_dimension(s,**kwargs)
+##########################
 
       ::
       
@@ -581,7 +583,8 @@ Usage
 
 .. image:: /docs/images/txt/swap_dimension.0.png
 
-- swap_row(s,rowseq1,rowseq2,**kwargs)
+swap_row(s,rowseq1,rowseq2,**kwargs)
+##########################
 
       ::
       
@@ -592,7 +595,8 @@ Usage
 
 .. image:: /docs/images/txt/swap_row.0.png
 
-- swap_rows(s,rowseqs1,rowseqs2,**kwargs)
+swap_rows(s,rowseqs1,rowseqs2,**kwargs)
+##########################
 
       ::
       
@@ -602,7 +606,8 @@ Usage
 
 .. image:: /docs/images/txt/swap_rows.0.png
 
-- to_ancient_chinese(s,**kwargs)
+to_ancient_chinese(s,**kwargs)
+##########################
 
       ::
       
@@ -613,7 +618,8 @@ Usage
 .. image:: /docs/images/txt/to_ancient_chinese.0.png
 
 
-- txtfilter(s,actions,**kwargs)
+txtfilter(s,actions,**kwargs)
+##########################
 
       ::
       
@@ -624,7 +630,8 @@ Usage
           print(ss)
 
 
-- wrap(s,fn,*args,**kwargs)
+wrap(s,fn,*args,**kwargs)
+##########################
 
       ::
       
