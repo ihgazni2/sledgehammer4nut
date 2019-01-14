@@ -26,14 +26,19 @@ Usage
 
 prepare
 #######  
-          from sldghmmr4nut  import txt
-          
-          s = '''两人对酌山花开
-          一杯一杯复一杯
-          我醉欲眠卿且去
-          明朝有意抱琴来'''
-          
-          print(s)
+
+
+      ::
+     
+              
+        from sldghmmr4nut  import txt
+
+        s = """两人对酌山花开 
+        一杯一杯复一杯
+        我醉欲眠卿且去
+        明朝有意抱琴来"""
+
+        print(s)
 
 
 append_col(s,col,**kwargs)
